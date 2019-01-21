@@ -7,6 +7,7 @@ one:
   profile_pic: MyString
   email: MyString
   password_digest: MyString
+  streak: 1
 
 two:
   username: MyString
@@ -15,3 +16,4 @@ two:
   profile_pic: MyString
   email: MyString
   password_digest: MyString
+  streak: 1

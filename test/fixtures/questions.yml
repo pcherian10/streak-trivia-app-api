@@ -5,7 +5,6 @@ one:
   first_choice: MyString
   second_choice: MyString
   third_choice: MyString
-  string: MyString
   correct_answer: MyString
   user_id: 
 
@@ -14,6 +13,5 @@ two:
   first_choice: MyString
   second_choice: MyString
   third_choice: MyString
-  string: MyString
   correct_answer: MyString
   user_id: 

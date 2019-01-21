@@ -5,7 +5,6 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
       t.string :first_choice
       t.string :second_choice
       t.string :third_choice
-      t.string :string
       t.string :correct_answer
       t.bigint :user_id
 
