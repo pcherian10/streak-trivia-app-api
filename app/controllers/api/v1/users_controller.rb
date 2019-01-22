@@ -1,5 +1,7 @@
 class Api::V1::UsersController < ApplicationController
 
+  before_action :set_user, only: [:show, :update, :destroy]
+
   def index
     @users = User.all
     render json:@users
@@ -21,7 +23,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
     @user.update(user_params)
     if @user.valid?
       @user.save
@@ -38,8 +39,21 @@ class Api::V1::UsersController < ApplicationController
 
   private
 
+  def set_user
+    @user = User.find_by(id: params[:id])
+  end
+
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :email, :password, :streak)
+    params.require(:user)
+    .permit(
+      :username,
+      :first_name,
+      :last_name,
+      :profile_pic,
+      :email,
+      :password_digest,
+      :streak
+    )
   end
 
 
