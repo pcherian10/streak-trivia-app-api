@@ -3,7 +3,7 @@ class Api::V1::QuestionsController < ApplicationController
   before_action :set_user, only:[:create, :update, :destroy]
 
   def index
-    @questions = Question.all
+    @questions = Question.all.sort_by{|q| q.id}
     render json: @questions
   end
 

@@ -52,7 +52,8 @@ class Api::V1::UsersController < ApplicationController
       :profile_pic,
       :email,
       :password_digest,
-      :streak
+      :streak,
+      :last_question_answered_id
     )
   end
 
