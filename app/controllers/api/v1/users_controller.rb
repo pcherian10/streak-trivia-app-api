@@ -8,8 +8,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def ranked_users
-    @users = User.all.sort_by{|u| u.highest_streak}
-    @users.reverse
+    @users = User.all.sort_by{|u| u.highest_streak}.reverse
     render json: @users
   end
 
@@ -59,7 +58,8 @@ class Api::V1::UsersController < ApplicationController
       :email,
       :password_digest,
       :streak,
-      :last_question_answered_id
+      :last_question_answered_id,
+      :highest_streak
     )
   end
 
