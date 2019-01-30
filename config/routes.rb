@@ -7,6 +7,7 @@ Rails.application.routes.draw do
             resources :questions, except: [:new, :edit]
           end
           post '/auth', to: 'auth#create'
+          get '/ranked_users', to: 'users#ranked_users'
         end
       end
 
