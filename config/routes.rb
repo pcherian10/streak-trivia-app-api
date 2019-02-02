@@ -8,6 +8,7 @@ Rails.application.routes.draw do
           end
           post '/auth', to: 'auth#create'
           get '/ranked_users', to: 'users#ranked_users'
+          get '/current_user', to: 'auth#show'
         end
       end
 
