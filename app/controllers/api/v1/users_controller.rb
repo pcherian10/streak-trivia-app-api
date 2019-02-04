@@ -56,7 +56,7 @@ class Api::V1::UsersController < ApplicationController
       :last_name,
       :profile_pic,
       :email,
-      :password,
+      :password_digest,
       :streak,
       :last_question_answered_id,
       :highest_streak
