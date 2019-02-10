@@ -16,7 +16,7 @@ class Api::V1::QuestionsController < ApplicationController
     @question = @user.questions.build(question_params)
     if @question.valid?
       @question.save
-      render json: @user.question
+      render json: @question
     else
       #render json: {errors: @question.errors.full_messages}, status: 500
       render json: {errors:"uh oh can't create you"}
