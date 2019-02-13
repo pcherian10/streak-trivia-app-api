@@ -48,7 +48,7 @@ class Api::V1::QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:text, :first_choice, :second_choice,
-      :third_choice, :correct_answer)
+      :third_choice, :correct_answer, :votes)
   end
 
 
